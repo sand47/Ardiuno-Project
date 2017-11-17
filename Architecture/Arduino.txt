@@ -1,0 +1,37 @@
+Arduino : (https://www.allaboutcircuits.com/technical-articles/understanding-arduino-uno-hardware-design/)
+
+- Is a open source electronic protoyping platform,The microcontroller on the board is programmed using Arduino programming language and ADE is based on processing , it can be standalone 
+
+- Microcontroller are IC tiny computer with low power and high speed 
+
+- Owner is at Italy
+-We can use shields for mp3 etc
+
+- not go surface mount ship (atmega328 fixed cant take out if its fired we need to though out)
+  so go with dual in line package
+  
+- RISC (reduced instruction set computer) is a microprocessor that is designed to perform a
+smaller number of types of computer instructions so that it can operate at a higher speed (perform more millions of instructions per second, or MIPS).
+
+- In circuit serial programming is used to boot loader atmega328 
+
+- Usb to serial UART interface microcontroller  communication used send back and forth The bridge in the latest revision is the ATmega16U2 
+ Computer works at 2.3GHZ and arduino at 16MHZ for sinking and commuinate with each other 
+
+- Atmega328 has internal clock of 8Mhz
+
+- Near controller we have crystal resonater for speeding 
+
+-  Arduino's PWM frequency at about 500Hz  analogWrite() is on a scale of 0 - 255, such that analogWrite(255) requests a 100% duty cycle (always on), and analogWrite(127) is a 50% duty cycle (on half the time) for example.
+
+- Led is for begugging 
+
+- Digital pin uses tri state buffer ( HIGH,LOW,read values)
+
+- 9600 bit per second 
+
+- Arduino use 10bit number for analog to digial convertion in analog read 
+and analog write is 8bit so uses the map function map(analogRead(),0,1023,0,255)
+
+- On board near 3.3v we have 3v regulator and above 5v regulator we have transistor on top of Tx we have resistor array 
+  dot on board in VIA

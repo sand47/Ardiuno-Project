@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <title>LED Controller</title>
+        <meta name="viewport" content="width=400px" />
+       
+        <script src="socket.io/socket.io.js"></script>
+        
+  </head>
+  <body>
+        <p>Click on the button to use Led </p>
+
+         <button id="myBtn" value="1" onclick="showValue()">ON</button><br></br>
+         <button id="myBtn1" value="2" onclick="showValue1()">OFF</button>
+         <button id="myBtn2" value="3" onclick="showValue2()">BLINK</button>
+
+         <p id="output"></p>
+             
+        <script type="text/javascript">
+                var socket = io.connect();
+               
+                socket.on('led', function (data) {
+                        document.getElementById("myBtn").value = data.value;
+                        document.getElementById("output").innerHTML = data.value;
+                });
+               
+                function showValue()
+                {
+                        var newValue = document.getElementById("myBtn").value;
+                        document.getElementById("output").innerHTML = newValue;        
+                        socket.emit('led', { value: newValue });
+                }
+                function showValue1()
+                {
+                        var newValue = document.getElementById("myBtn").value;
+                        document.getElementById("output").innerHTML = newValue;        
+                        socket.emit('led', { value: newValue });
+                }
+                function showValue2()
+                {
+                        var newValue = document.getElementById("myBtn").value;
+                        document.getElementById("output").innerHTML = newValue;        
+                        socket.emit('led', { value: newValue });
+                }
+        </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+GSM 
+
+- can we used to sms ,mms ,voice n data ,fax
+-Sim900a module
+-to commuinate with pc or microcontroller it has RS323 serial interface using max323IC
+-has antenna 
+-has led for beguuging purpose 
+-green is power led (12v,1A)
+-AT command (extr at command)
+-has sim holder
+-6 to 10 per min GPRS,30 per can be achibed
+-suppy power and for first checking put sim all n call to it ,we shld see blinking led stating incoming call
+-putty is standlone and fast software compared hyper terminal
+- serial and see com port whatever 9600
+-never power without antenna 
+- commuinate through AT 
+
+AT
+ok
+AT+CPIN
+checking for sim ready or not
+
+for calling
+ATDphonenumber;
+
+for dail 
+
+ATDphonenumber;
+for hang 
+ATH and enter
+
+To send sms convert gsm to text mode
+AT+CMGF=1 (AT+CMGF? N AT+CMGF=? (0,1))
+ok
+
+AT+CMGS="9884040029" and enter
+type the message and  press ctrl+z  (Ox1a)
+
+ok
+
+Receving data using gsm
+AT+CMGL="ALL" (Display all message as unread or read)
+AT+CMGL=ID_number
+AT+CMGD=ID_number 
